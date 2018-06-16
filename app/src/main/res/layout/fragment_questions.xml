@@ -11,65 +11,83 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
-        <ImageView
+        <ImageButton
+            android:scaleType="fitXY"
+            android:background="@android:color/white"
+            android:padding="0dp"
             android:id="@+id/imageView6"
             android:layout_width="50dp"
             android:layout_height="52dp"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/imageView5"
-            android:layout_marginStart="92dp"
+            android:layout_marginStart="102dp"
             android:src="@drawable/patrecontent" />
 
-        <ImageView
+        <ImageButton
+            android:scaleType="fitXY"
+            android:background="@android:color/white"
+            android:padding="0dp"
             android:id="@+id/imageView7"
             android:layout_width="50dp"
             android:layout_height="52dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/imageView5"
-            android:layout_marginStart="152dp"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/pokerface" />
 
-        <ImageView
+        <ImageButton
+            android:scaleType="fitXY"
+            android:background="@android:color/white"
+            android:padding="0dp"
             android:id="@+id/imageView8"
             android:layout_width="50dp"
             android:layout_height="52dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/imageView5"
-            android:layout_marginEnd="117dp"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_marginEnd="102dp"
             android:src="@drawable/content" />
 
-        <ImageView
+        <ImageButton
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:background="@android:color/white"
             android:id="@+id/imageView9"
             android:layout_width="50dp"
             android:layout_height="52dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/imageView5"
-            android:layout_marginEnd="48dp"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_marginEnd="29dp"
             android:src="@drawable/idiot" />
 
         <TextView
             android:id="@+id/section_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_width="289dp"
+            android:layout_height="111dp"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="116dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="63dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:textSize="30sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout"
             tools:layout_constraintLeft_creator="1"
-            tools:layout_constraintTop_creator="1" />
+            tools:layout_constraintTop_creator="1"
+            tools:ignore="NotSibling" />
 
-        <ImageView
+        <ImageButton
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:background="@android:color/white"
             android:id="@+id/imageView5"
             android:layout_width="50dp"
             android:layout_height="52dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="175dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginBottom="190dp"
+            android:layout_marginStart="29dp"
             android:src="@drawable/paconten" />
     </RelativeLayout>
 

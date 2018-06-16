@@ -10,34 +10,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="167dp"
             android:layout_height="46dp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="109dp"
-            android:layout_marginTop="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
             android:text="Votre profil"
             android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="159dp"
-            android:layout_height="106dp"
+            android:layout_width="143dp"
+            android:layout_height="86dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="93dp"
+            android:layout_marginTop="84dp"
             app:srcCompat="@drawable/blob" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="184dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="Prénom"
             android:inputType="textPersonName" />
 
@@ -47,8 +52,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="177dp"
+            android:layout_marginBottom="222dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="Date de naissance"
             android:inputType="date"
             android:selectAllOnFocus="false" />
@@ -58,16 +64,18 @@
             android:layout_width="215dp"
             android:layout_height="44dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/textView3"
-            android:layout_marginBottom="92dp" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="141dp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView2"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="192dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
             android:text="Nombre d'heures de sommeil" />
 
         <EditText
@@ -76,19 +84,19 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="84dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="Heure de lever"
             android:inputType="time" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="101dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="11dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/imageView4"
             android:onClick="demarrer"
             app:srcCompat="@drawable/ic_menu_send" />
     </RelativeLayout>
