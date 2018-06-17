@@ -30,6 +30,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity android:name=".DetailsNews"></activity>
+
         <activity android:name=".AndroidBuildingMusicPlayerActivity"
             android:label="AndroidBuildingMusicPlayerActivity"
             android:theme="@style/AppTheme.NoActionBar">

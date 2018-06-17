@@ -13,9 +13,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    Utilisateur lePigeon;
+
+    List<News> lesNews = new ArrayList<>();
+
+    int affiche;
+
+    TextView titre;
+    TextView presentation;
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +56,63 @@ public class Home extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        lePigeon = (Utilisateur) getIntent().getSerializableExtra("lePigeon");
+
+        titre = findViewById(R.id.titreNews);
+        presentation = findViewById(R.id.presNews);
+        image = findViewById(R.id.imgNews);
+
+        News n1 = new News();
+        n1.setPresentation("Un texte de présentation pour une news inutile pour des connards de hypsters.");
+        n1.setTitre("Ma première news inutile");
+        n1.setTexteComplet("J'estpère que t'es content d'avoir cliqué ici comme un gros boloss pour lirejkhvbdswhjgvdghcsvqjcbqdsjhbchjksqdbcjhqsdbchjkbdshjbcqsdjhbcjhqdsbchjsqdbcjhbqdshjcbqsdhjbchjsdvcjhdsqvghdsqhjvbdshjbchjsqdbchjqdsbcjhkqbsdcjhbqsdhjcbjqhsdvcghdsvcjhsdvcghvsqdhgcvqsdvchgsqdvcghjdsvqhgcvqsdghvcgqsdvcghsqdvcghjvqsdghcvqsdghvchgqdsvchgqs");
+        n1.setImg("@drawable/ic_menu_gallery");
+
+        News n2 = new News();
+        n2.setPresentation("Un texte de présentation pour une news inutile pour des connards de hypsters.");
+        n2.setTitre("Ma seconde news inutile");
+        n2.setTexteComplet("J'estpère que t'es content d'avoir cliqué ici comme un gros boloss pour lirejkhvbdswhjgvdghcsvqjcbqdsjhbchjksqdbcjhqsdbchjkbdshjbcqsdjhbcjhqdsbchjsqdbcjhbqdshjcbqsdhjbchjsdvcjhdsqvghdsqhjvbdshjbchjsqdbchjqdsbcjhkqbsdcjhbqsdhjcbjqhsdvcghdsvcjhsdvcghvsqdhgcvqsdvchgsqdvcghjdsvqhgcvqsdghvcgqsdvcghsqdvcghjvqsdghcvqsdghvchgqdsvchgqs");
+        n2.setImg("@drawable/logo");
+
+        lesNews.add(n1);
+        lesNews.add(n2);
+
+        affiche = 0;
+        afficher(0);
+
+
+    }
+
+    private void afficher(int index){
+        News trucAafficher = lesNews.get(index);
+        titre.setText(trucAafficher.getTitre());
+        presentation.setText(trucAafficher.getPresentation());
+    }
+
+    public void btnAvancer(View view){
+        if (lesNews.size()-1 == affiche){
+
+        }else{
+            affiche += 1;
+            afficher(affiche);
+        }
+    }
+
+    public void btnReculer(View view){
+        if (0 == affiche){
+
+        }else{
+            affiche -= 1;
+            afficher(affiche);
+        }
+    }
+
+    public void moreInfos(View views){
+        News news = lesNews.get(affiche);
+        Intent details = new Intent(this, DetailsNews.class);
+        details.putExtra("new", news);
+        startActivity(details);
     }
 
     @Override
@@ -57,6 +129,9 @@ public class Home extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
+
+        TextView nom = findViewById(R.id.nomMenu);
+        nom.setText(lePigeon.getNom());
         return true;
     }
 

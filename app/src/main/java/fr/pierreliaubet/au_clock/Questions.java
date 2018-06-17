@@ -1,5 +1,6 @@
 package fr.pierreliaubet.au_clock;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class Questions extends AppCompatActivity {
+
+    private Utilisateur lePigeon = new Utilisateur();
+    private int cpt = 0;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -59,6 +63,20 @@ public class Questions extends AppCompatActivity {
             }
         });
 
+
+
+
+    }
+
+    public void clicSalope(View view){
+        cpt += 1;
+        if (cpt == 9){
+            Intent intent = getIntent();
+            lePigeon = (Utilisateur) intent.getSerializableExtra("lePigeon");
+            Intent home = new Intent(this, Home.class);
+            home.putExtra("lePigeon", lePigeon);
+            startActivity(home);
+        }
     }
 
 
