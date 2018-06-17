@@ -46,7 +46,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.player);
-		
+
 		// All player buttons
 		btnPlay = (ImageButton) findViewById(R.id.btnPlay);
 		btnForward = (ImageButton) findViewById(R.id.btnForward);
@@ -261,15 +261,21 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 			// repeat is on play same song again
 			playSong(currentSongIndex, title);
 		} else {
-			// no repeat or shuffle ON - Changement d'activité pour retourner sur la liste d'exercices
-			this.finish();
+			mp.stop();
+			finish();
 		}
 	}
-	
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		mp.stop();
+	}
+
 	@Override
 	 public void onDestroy(){
 	 super.onDestroy();
-	    mp.release();
+		mp.stop();
 	 }
 	
 }
