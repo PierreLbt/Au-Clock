@@ -29,6 +29,7 @@ public class DetailsNews extends AppCompatActivity {
 
         titre.setText(news.getTitre());
         contenu.setText(news.getTexteComplet());
+        img.setImageResource(news.getImg());
     }
 
     public void retour(View view){

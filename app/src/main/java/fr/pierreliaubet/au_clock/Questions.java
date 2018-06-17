@@ -54,15 +54,6 @@ public class Questions extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
 
 
 
@@ -70,6 +61,7 @@ public class Questions extends AppCompatActivity {
 
     public void clicSalope(View view){
         cpt += 1;
+        mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1);
         if (cpt == 9){
             Intent intent = getIntent();
             lePigeon = (Utilisateur) intent.getSerializableExtra("lePigeon");

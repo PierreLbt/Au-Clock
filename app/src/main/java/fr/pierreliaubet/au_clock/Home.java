@@ -24,6 +24,8 @@ public class Home extends AppCompatActivity
 
     Utilisateur lePigeon;
 
+    static Home home;
+
     List<News> lesNews = new ArrayList<>();
 
     int affiche;
@@ -38,13 +40,13 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        home = this;
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(Home.home, ListeExercices.class));
             }
         });
 
@@ -64,19 +66,40 @@ public class Home extends AppCompatActivity
         image = findViewById(R.id.imgNews);
 
         News n1 = new News();
-        n1.setPresentation("Un texte de présentation pour une news inutile pour des connards de hypsters.");
-        n1.setTitre("Ma première news inutile");
-        n1.setTexteComplet("J'estpère que t'es content d'avoir cliqué ici comme un gros boloss pour lirejkhvbdswhjgvdghcsvqjcbqdsjhbchjksqdbcjhqsdbchjkbdshjbcqsdjhbcjhqdsbchjsqdbcjhbqdshjcbqsdhjbchjsdvcjhdsqvghdsqhjvbdshjbchjsqdbchjqdsbcjhkqbsdcjhbqsdhjcbjqhsdvcghdsvcjhsdvcghvsqdhgcvqsdvchgsqdvcghjdsvqhgcvqsdghvcgqsdvcghsqdvcghjvqsdghcvqsdghvchgqdsvchgqs");
-        n1.setImg("@drawable/ic_menu_gallery");
+        n1.setPresentation("Conseil pour gérer la lumière dans votre chambre.");
+        n1.setTitre("La luminausité");
+        n1.setTexteComplet("Pour un meilleur sommeil, il est conseillé de dormir dans le noir complet. Coupez toutes les lumières et évitez toutes celles qui peuvent être parasite (par exemple un réveil à affichage digital). En plus de ça, nous vous recommendons d'avoir des murs sombres dans votre chambre pour être le plus dans le noir possible.");
+        n1.setImg(R.drawable.soleil);
 
         News n2 = new News();
-        n2.setPresentation("Un texte de présentation pour une news inutile pour des connards de hypsters.");
-        n2.setTitre("Ma seconde news inutile");
-        n2.setTexteComplet("J'estpère que t'es content d'avoir cliqué ici comme un gros boloss pour lirejkhvbdswhjgvdghcsvqjcbqdsjhbchjksqdbcjhqsdbchjkbdshjbcqsdjhbcjhqdsbchjsqdbcjhbqdshjcbqsdhjbchjsdvcjhdsqvghdsqhjvbdshjbchjsqdbchjqdsbcjhkqbsdcjhbqsdhjcbjqhsdvcghdsvcjhsdvcghvsqdhgcvqsdvchgsqdvcghjdsvqhgcvqsdghvcgqsdvcghsqdvcghjvqsdghcvqsdghvchgqdsvchgqs");
-        n2.setImg("@drawable/logo");
+        n2.setPresentation("Informations sur la températures dans votre chambre.");
+        n2.setTitre("La température");
+        n2.setTexteComplet("Il est important de veiller à ce que cette dernière ne dépasse pas les 20°C. L'été, climatisez ou ventilez votre chambre avant d'aller dormir et assurez vous que l'air ne soit pas trop sec.");
+        n2.setImg(R.drawable.temperature);
+
+        News n3 = new News();
+        n3.setPresentation("Quelle alimentation est recommandée avant d'aller se coucher ?");
+        n3.setTitre("L'alimentation");
+        n3.setTexteComplet("Les alimentations de type sucres rapides ainsi que le lait chaud favorisent l'endormissement.\nNous vous recommendons de ne pas trop manger le soir pour avoir un sommeil de meilleure qualité.");
+        n3.setImg(R.drawable.manger);
+
+        News n4 = new News();
+        n4.setPresentation("Que peut-on dire des animaux dans la chambre ?");
+        n4.setTitre("Les animaux");
+        n4.setTexteComplet("Votre animal de compagnie peut être une source de mico-réveil. Aménagez lui un endroit pour qu'il ait son propre lit.\nLes poils n'animaux peuvent être source d'allergie, évitez les si vous y êtes sujet.");
+        n4.setImg(R.drawable.chat);
+
+        News n5 = new News();
+        n5.setPresentation("News : Le manque de sommeil.");
+        n5.setTitre("Le manque de sommeil");
+        n5.setTexteComplet("La dette de sommeil a un impact direct sur notre quotidien comme le manque de performance et les difficultés de concentration.\nA long terme, des risques plus important sont à venir comme le surpoids et des risques cardio vasculaire.");
+        n5.setImg(R.drawable.info);
 
         lesNews.add(n1);
         lesNews.add(n2);
+        lesNews.add(n3);
+        lesNews.add(n4);
+        lesNews.add(n5);
 
         affiche = 0;
         afficher(0);
@@ -88,6 +111,7 @@ public class Home extends AppCompatActivity
         News trucAafficher = lesNews.get(index);
         titre.setText(trucAafficher.getTitre());
         presentation.setText(trucAafficher.getPresentation());
+        image.setImageResource(trucAafficher.getImg());
     }
 
     public void btnAvancer(View view){
