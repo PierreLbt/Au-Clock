@@ -8,7 +8,7 @@ public class Exercice implements Serializable{
     String condition;
     String duree;
     String fichier;
-    String img;
+    int img;
 
     public String getTitre() {
         return titre;
@@ -50,11 +50,11 @@ public class Exercice implements Serializable{
         this.fichier = fichier;
     }
 
-    public String getImg() {
+    public int getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(int img) {
         this.img = img;
     }
 }

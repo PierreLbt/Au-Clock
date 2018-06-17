@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 	private TextView songTitleLabel;
 	private TextView songCurrentDurationLabel;
 	private TextView songTotalDurationLabel;
+	private ImageView imgexo;
 	// Media Player
 	private  MediaPlayer mp;
 	// Handler to update UI timer, progress bar etc,.
@@ -55,6 +57,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 		songTitleLabel = (TextView) findViewById(R.id.songTitle);
 		songCurrentDurationLabel = (TextView) findViewById(R.id.songCurrentDurationLabel);
 		songTotalDurationLabel = (TextView) findViewById(R.id.songTotalDurationLabel);
+		imgexo = (ImageView) findViewById(R.id.imgexoplayer);
 		
 		// Mediaplayer
 		mp = new MediaPlayer();
@@ -81,6 +84,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 		exo = (Exercice) intent.getSerializableExtra("exo");
 		title = exo.getTitre();
 		playSong(index, title);
+		imgexo.setImageResource(exo.getImg());
 				
 		/**
 		 * Play button click event

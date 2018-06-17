@@ -33,32 +33,32 @@ public class ListeExercices extends AppCompatActivity {
         duree = findViewById(R.id.dureeExo);
 
         Exercice exo1 = new Exercice();
-        exo1.setTitre("Flash sophro");
+        exo1.setTitre("Flash Sophro");
         exo1.setCondition("");
         exo1.setDuree("5 min");
-        exo1.setFichier("");
-        exo1.setPresenation("");
+        exo1.setPresenation("Exercice de Sophrologie court, pour correspondre rapidement à tout besoin");
+        exo1.setImg(R.drawable.zenasia);
 
         Exercice exo2 = new Exercice();
         exo2.setTitre("Exercice long");
         exo2.setCondition("");
-        exo2.setDuree("");
-        exo2.setFichier("");
-        exo2.setPresenation("");
+        exo2.setDuree("11 min");
+        exo2.setPresenation("Exercice de Sophrologie complet pour toute situation");
+        exo2.setImg(R.drawable.zencailloux);
 
         Exercice exo3 = new Exercice();
-        exo3.setTitre("Liberations sensations positives");
+        exo3.setTitre("Libération sensations positives");
         exo3.setCondition("");
-        exo3.setDuree("");
-        exo3.setFichier("");
+        exo3.setDuree("7 min");
         exo3.setPresenation("");
+        exo3.setImg(R.drawable.zenlotus);
 
         Exercice exo4 = new Exercice();
         exo4.setTitre("Point d'encrage");
         exo4.setCondition("");
-        exo4.setDuree("");
-        exo4.setFichier("");
+        exo4.setDuree("6 min");
         exo4.setPresenation("");
+        exo4.setImg(R.drawable.zentemple);
 
         lesExos.add(exo1);
         lesExos.add(exo2);
@@ -73,6 +73,7 @@ public class ListeExercices extends AppCompatActivity {
         titre.setText(trucAafficher.getTitre());
         presentation.setText(trucAafficher.getPresenation());
         duree.setText(trucAafficher.getDuree());
+        image.setImageResource(trucAafficher.getImg());
     }
 
     public void btnAvancer(View view){
