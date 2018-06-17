@@ -21,6 +21,9 @@ public class SongsManager {
      * */
     public ArrayList<Integer> getPlayList(){
         songsList.add(R.raw.flash_sophro);
+        songsList.add(R.raw.exercice_long);
+        songsList.add(R.raw.exo_liberationsensationpositive);
+        songsList.add(R.raw.exo_pointdancrage);
         // return songs list array
         return songsList;
     }

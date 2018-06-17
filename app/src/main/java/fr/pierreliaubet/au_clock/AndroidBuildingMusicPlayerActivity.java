@@ -68,8 +68,14 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 		songsList = songManager.getPlayList();
 
 		// TODO : Récupération de l'intent avec valeur de l'index de la chanson + titre + img
+		/*
+		        0 : flash_sophro
+        		1 : exercice_long
+        		2 : exo_liberationsensationpositive
+        		3 : exo_pointdancrage
+		 */
 		int index = 0;
-		title = "Mongolo";
+		title = "Flash Sophro";
 		playSong(index, title);
 				
 		/**
