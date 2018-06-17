@@ -67,7 +67,7 @@ public class Home extends AppCompatActivity
 
         News n1 = new News();
         n1.setPresentation("Conseil pour gérer la lumière dans votre chambre.");
-        n1.setTitre("La luminausité");
+        n1.setTitre("La luminosité");
         n1.setTexteComplet("Pour un meilleur sommeil, il est conseillé de dormir dans le noir complet. Coupez toutes les lumières et évitez toutes celles qui peuvent être parasite (par exemple un réveil à affichage digital). En plus de ça, nous vous recommendons d'avoir des murs sombres dans votre chambre pour être le plus dans le noir possible.");
         n1.setImg(R.drawable.soleil);
 

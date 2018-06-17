@@ -16,13 +16,15 @@
 
         <TextView
             android:id="@+id/titreNews"
-            android:layout_width="188dp"
-            android:layout_height="35dp"
+            android:layout_width="196dp"
+            android:layout_height="53dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="86dp"
-            android:layout_marginTop="41dp"
-            android:text="Titre" />
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="33dp"
+            android:gravity="center"
+            android:text="Titre"
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imgNews"
@@ -30,17 +32,18 @@
             android:layout_height="226dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="98dp"
             app:srcCompat="@drawable/ic_menu_gallery" />
 
         <TextView
             android:id="@+id/presNews"
             android:layout_width="314dp"
-            android:layout_height="79dp"
+            android:layout_height="107dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="62dp"
-            android:text="TextView" />
+            android:layout_marginBottom="53dp"
+            android:text="TextView"
+            android:textSize="24sp" />
 
         <ImageButton
             android:id="@+id/btnNext"
@@ -50,6 +53,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="33dp"
             android:onClick="btnAvancer"
+            android:paddingLeft="20dp"
             app:srcCompat="@android:drawable/ic_media_next" />
 
         <ImageButton
@@ -65,10 +69,8 @@
             android:id="@+id/btnMore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/presNews"
-            android:layout_marginStart="127dp"
-            android:layout_marginTop="-62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:onClick="moreInfos"
             android:text="Voir plus >>" />
     </RelativeLayout>
