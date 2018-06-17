@@ -30,12 +30,12 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".DetailsNews"></activity>
-
-        <activity android:name=".AndroidBuildingMusicPlayerActivity"
+        <activity android:name=".DetailsNews" />
+        <activity
+            android:name=".AndroidBuildingMusicPlayerActivity"
             android:label="AndroidBuildingMusicPlayerActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ListeExercices"></activity>
     </application>
 
 </manifest>

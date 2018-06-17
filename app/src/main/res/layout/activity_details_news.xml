@@ -14,9 +14,8 @@
             android:id="@+id/imgDetails"
             android:layout_width="128dp"
             android:layout_height="117dp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="46dp"
+            android:layout_alignStart="@+id/contenuDetails"
             android:layout_marginTop="38dp"
             app:srcCompat="@drawable/ic_menu_gallery"
             tools:layout_editor_absoluteX="16dp"
@@ -24,12 +23,12 @@
 
         <TextView
             android:id="@+id/titreDetails"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="115dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginTop="53dp"
             android:text="TextView"
             tools:layout_editor_absoluteX="186dp"
             tools:layout_editor_absoluteY="43dp" />

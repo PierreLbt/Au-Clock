@@ -175,4 +175,7 @@ public class Home extends AppCompatActivity
         return true;
     }
 
+    public void afficherExercices(View view) {
+        startActivity(new Intent(this, ListeExercices.class));
+    }
 }
