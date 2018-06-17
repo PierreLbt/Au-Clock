@@ -1,6 +1,8 @@
 package fr.pierreliaubet.au_clock;
 
-public class Exercice {
+import java.io.Serializable;
+
+public class Exercice implements Serializable{
     String titre;
     String presenation;
     String condition;

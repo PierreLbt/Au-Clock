@@ -19,6 +19,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="21dp"
+            android:onClick="commencerExercice"
             android:text="Démarrer" />
 
         <TextView
@@ -38,6 +39,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="33dp"
             android:layout_marginTop="16dp"
+            android:onClick="btnAvancer"
             app:srcCompat="@android:drawable/ic_media_next" />
 
         <ImageButton
@@ -47,6 +49,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/btnExoSuivant"
             android:layout_marginStart="31dp"
+            android:onClick="btnReculer"
             app:srcCompat="@android:drawable/ic_media_previous" />
 
         <TextView
@@ -59,7 +62,7 @@
             android:text="TextView" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imgExo"
             android:layout_width="204dp"
             android:layout_height="146dp"
             android:layout_alignParentBottom="true"
@@ -75,5 +78,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="129dp"
             android:text="TextView" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

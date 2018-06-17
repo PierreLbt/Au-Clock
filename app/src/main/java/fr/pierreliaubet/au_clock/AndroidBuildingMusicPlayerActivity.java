@@ -39,6 +39,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 	private ArrayList<Integer> songsList = new ArrayList<Integer>();
 
 	private String title = "";
+	Exercice exo;
 	
 
 	@Override
@@ -74,8 +75,11 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
         		2 : exo_liberationsensationpositive
         		3 : exo_pointdancrage
 		 */
-		int index = 0;
-		title = "Flash Sophro";
+		Intent intent = getIntent();
+
+		int index = intent.getIntExtra("index",0);
+		exo = (Exercice) intent.getSerializableExtra("exo");
+		title = exo.getTitre();
 		playSong(index, title);
 				
 		/**
@@ -163,7 +167,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 			mp.start();
 			// Displaying Song title
 			// TODO : Récupérer l'objet l'exercice
-        	songTitleLabel.setText(name);
+        	songTitleLabel.setText(exo.getTitre());
 			
         	// Changing Button Image to pause image
 			btnPlay.setImageResource(R.drawable.btn_pause);
@@ -258,7 +262,7 @@ public class AndroidBuildingMusicPlayerActivity extends Activity implements OnCo
 			playSong(currentSongIndex, title);
 		} else {
 			// no repeat or shuffle ON - Changement d'activité pour retourner sur la liste d'exercices
-			// TODO
+			this.finish();
 		}
 	}
 	
