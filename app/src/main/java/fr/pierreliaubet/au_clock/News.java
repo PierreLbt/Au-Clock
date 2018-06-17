@@ -6,7 +6,7 @@ public class News implements Serializable{
     String titre;
     String presentation;
     String texteComplet;
-    String img;
+    int img;
 
     public String getTitre() {
         return titre;
@@ -32,11 +32,11 @@ public class News implements Serializable{
         this.texteComplet = texteComplet;
     }
 
-    public String getImg() {
+    public int getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(int img) {
         this.img = img;
     }
 
