@@ -10,59 +10,59 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
-            android:scaleType="fitXY"
-            android:background="@android:color/white"
-            android:padding="0dp"
             android:id="@+id/imageView6"
             android:layout_width="50dp"
             android:layout_height="52dp"
-            android:onClick="clicSalope"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/imageView5"
             android:layout_marginStart="102dp"
+            android:background="@android:color/white"
+            android:onClick="clicSalope"
+            android:padding="0dp"
+            android:scaleType="fitXY"
             android:src="@drawable/patrecontent" />
 
         <ImageButton
-            android:scaleType="fitXY"
-            android:background="@android:color/white"
-            android:padding="0dp"
             android:id="@+id/imageView7"
             android:layout_width="50dp"
             android:layout_height="52dp"
-            android:onClick="clicSalope"
             android:layout_alignTop="@+id/imageView6"
             android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            android:onClick="clicSalope"
+            android:padding="0dp"
+            android:scaleType="fitXY"
             android:src="@drawable/pokerface" />
 
         <ImageButton
-            android:scaleType="fitXY"
-            android:background="@android:color/white"
-            android:padding="0dp"
             android:id="@+id/imageView8"
             android:layout_width="50dp"
             android:layout_height="52dp"
-            android:onClick="clicSalope"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/imageView6"
             android:layout_marginEnd="102dp"
+            android:background="@android:color/white"
+            android:onClick="clicSalope"
+            android:padding="0dp"
+            android:scaleType="fitXY"
             android:src="@drawable/content" />
 
         <ImageButton
-            android:scaleType="fitXY"
-            android:padding="0dp"
-            android:background="@android:color/white"
             android:id="@+id/imageView9"
             android:layout_width="50dp"
             android:layout_height="52dp"
-            android:onClick="clicSalope"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/imageView6"
-            android:layout_marginEnd="29dp"
+            android:layout_marginEnd="35dp"
+            android:background="@android:color/white"
+            android:onClick="clicSalope"
+            android:padding="0dp"
+            android:scaleType="fitXY"
             android:src="@drawable/idiot" />
 
         <TextView
@@ -77,22 +77,22 @@
             android:textSize="30sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+            tools:ignore="NotSibling"
             tools:layout_constraintLeft_creator="1"
-            tools:layout_constraintTop_creator="1"
-            tools:ignore="NotSibling" />
+            tools:layout_constraintTop_creator="1" />
 
         <ImageButton
-            android:scaleType="fitXY"
-            android:padding="0dp"
-            android:background="@android:color/white"
             android:id="@+id/imageView5"
             android:layout_width="50dp"
             android:layout_height="52dp"
-            android:onClick="clicSalope"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="190dp"
-            android:layout_marginStart="29dp"
+            android:layout_marginStart="35dp"
+            android:background="@android:color/white"
+            android:onClick="clicSalope"
+            android:padding="0dp"
+            android:scaleType="fitXY"
             android:src="@drawable/paconten" />
     </RelativeLayout>
 
