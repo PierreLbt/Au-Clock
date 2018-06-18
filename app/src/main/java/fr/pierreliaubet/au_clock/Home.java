@@ -185,6 +185,9 @@ public class Home extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
             startActivity(new Intent(this, ListeExercices.class));
+        } else if (id == R.id.nav_news){
+            Intent truc = new Intent(this, ListeNews.class);
+            startActivity(truc);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

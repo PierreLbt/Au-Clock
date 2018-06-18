@@ -34,8 +34,9 @@
         <activity
             android:name=".AndroidBuildingMusicPlayerActivity"
             android:label="AndroidBuildingMusicPlayerActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ListeExercices"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ListeExercices" />
+        <activity android:name=".ListeNews"></activity>
     </application>
 
 </manifest>
